@@ -1,3 +1,5 @@
+const btnStart = document.getElementById('btnStart');
+const divTime = document.getElementById('divTime')
 const startTime = function() {
   let countTime = 0;
   setInterval(() => {
