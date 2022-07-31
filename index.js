@@ -4,7 +4,7 @@ const btnEnd = document.getElementById('btnEnd');
 
 let timer;
 
-btnStart.addEventListener('click', function() {
+btnStart.addEventListener('click', () => {
   let countTime = 0;
   timer = setInterval( () =>{
     if(countTime == 60) countTime = 0;
@@ -14,8 +14,11 @@ btnStart.addEventListener('click', function() {
 });
 
 btnEnd.addEventListener('click', () => {
-  if(timer){
+  if(timer > 0){
     clearTimeout(timer);
+    timer = 0
+  }else {
+    timer = setTimeout()
   }
 });
 
@@ -34,4 +37,4 @@ btnEnd.addEventListener('click', () => {
 
 
 // btnStart.addEventListener("click", startTime);
-// btnEnd.addEventListener("click", endTime);
+// btnEnd.addEventListener("click", endTime;
